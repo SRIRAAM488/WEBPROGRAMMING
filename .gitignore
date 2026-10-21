@@ -1,0 +1,62 @@
+# ============================================================
+# DailyFlow .gitignore
+#
+# Rule of thumb: anything that can be recreated by running
+# `pip install`, `npm install` or the app itself is NOT committed.
+# ============================================================
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# The virtual environment (52 MB of installed packages)
+backend/venv/
+backend/.venv/
+venv/
+.venv/
+
+# Test / tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---------- Node ----------
+# The installed packages (102 MB) - recreated by `npm install`
+node_modules/
+
+# Production build output - recreated by `npm run build`
+frontend/dist/
+frontend/build/
+
+# ---------- The database ----------
+# SQLite file created at runtime. Never commit user data.
+*.db
+*.db-shm
+*.db-wal
+backend/dailyflow.db
+
+# ---------- Local environment files ----------
+# `.env.example` files ARE committed (they document the variables);
+# the real `.env` files are not.
+.env
+.env.local
+.env.*.local
+!*.env.example
+!frontend/.env.example
+
+# ---------- Editors / OS junk ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ---------- Logs & uploads ----------
+*.log
+npm-debug.log*
+uploads/

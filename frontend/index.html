@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#5B5FEF" />
+    <meta
+      name="description"
+      content="DailyFlow - Stay on top of everyday life. Track bills, document expiry, medication schedules and water intake in one place."
+    />
+    <title>DailyFlow — Stay on top of everyday life.</title>
+
+    <!-- Apply the saved theme before React boots, so there is no white flash. -->
+    <script>
+      try {
+        var saved = localStorage.getItem('dailyflow-theme')
+        if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark')
+      } catch (e) {
+        /* localStorage may be unavailable in private mode; the light theme is fine. */
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
